@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "spruce",
+	"version": "${version}",
+	"name": "Spruce",
+	"description": "The Spruce mod is an overhaul of Minecraft that adds plenty of QoL and cosmetic features!",
+	"authors": [
+		"dedfishy",
+		"mattmanthe"
+	],
+	"contact": {
+		"homepage": "https://spruce.boyne.dev",
+		"sources": "https://github.com/Spruce"
+	},
+	"license": "MIT",
+	"icon": "assets/spruce/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.boyne.spruce.ExampleMod"
+		],
+		"client": [
+			"dev.boyne.spruce.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"spruce.mixins.json",
+		{
+			"config": "spruce.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

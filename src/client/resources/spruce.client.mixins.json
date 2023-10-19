@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "dev.boyne.spruce.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"client.ExampleClientMixin",
+		"TitleScreenMixin",
+		"CapeMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
