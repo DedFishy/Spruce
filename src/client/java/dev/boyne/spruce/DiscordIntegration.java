@@ -9,7 +9,7 @@ public class DiscordIntegration extends Thread {
     Activity activity;
     public DiscordIntegration() {
         CreateParams params = new CreateParams();
-        params.setClientID(1157433122468667494L);
+        params.setClientID(1163500538458034206L);
         params.setFlags(CreateParams.getDefaultFlags());
         // Create the Core
         core = new Core(params);

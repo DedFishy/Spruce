@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "spruce",
-	"version": "${version}",
+	"version": "0.0.1",
 	"name": "Spruce",
 	"description": "The Spruce mod is an overhaul of Minecraft that adds plenty of QoL and cosmetic features!",
 	"authors": [

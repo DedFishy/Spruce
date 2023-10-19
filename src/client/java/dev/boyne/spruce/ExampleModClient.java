@@ -3,11 +3,18 @@ package dev.boyne.spruce;
 import de.jcm.discordgamesdk.activity.Activity;
 import net.fabricmc.api.ClientModInitializer;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class ExampleModClient implements ClientModInitializer {
 	public static DiscordIntegration discord = new DiscordIntegration();
 	@Override
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+		try {
+			Files.createDirectories(Paths.get("capes"));
+		} catch (IOException ignored) {}
 		discord.start();
 
 		Activity activity = new Activity();
@@ -19,8 +26,8 @@ public class ExampleModClient implements ClientModInitializer {
 		//activity.party().setID("Party!");
 		//activity.secrets().setJoinSecret("Join!");
 
-		activity.assets().setLargeImage("logo-plain");
-		activity.assets().setLargeText("ReCape");
+		activity.assets().setLargeImage("modern");
+		activity.assets().setLargeText("Spruce");
 
 		// Finally, update the current activity to our activity
 		discord.setActivity(activity);

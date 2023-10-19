@@ -5,7 +5,7 @@
 	"client": [
 		"client.ExampleClientMixin",
 		"TitleScreenMixin",
-		"CapeMixin"
+		"SkinTexturesMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

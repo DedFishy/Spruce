@@ -34,7 +34,7 @@ public abstract class TitleScreenMixin extends Screen {
 
     @Inject(at = @At("RETURN"), method = "render")
     private void renderNewText(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        context.drawTextWithShadow(this.textRenderer, "ReCape Client", 2, this.height - 20, 0xFFFFFF);
+        context.drawTextWithShadow(this.textRenderer, "Spruce!", 2, this.height - 20, 0xFFFFFF);
 
     }
 }
