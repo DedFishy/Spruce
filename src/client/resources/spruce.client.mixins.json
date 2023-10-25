@@ -3,9 +3,12 @@
 	"package": "dev.boyne.spruce.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"client.ExampleClientMixin",
+		"client.MinecraftClientInjection",
+		"client.PlayerEntityModelAccessor",
 		"TitleScreenMixin",
-		"SkinTexturesMixin"
+		"SkinTexturesMixin",
+        "PlayerEntityRendererMixin",
+		"PlayerEntityModelMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

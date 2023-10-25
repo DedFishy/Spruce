@@ -1,6 +1,6 @@
 package dev.boyne.spruce.mixin.client;
 
-import dev.boyne.spruce.ExampleModClient;
+import dev.boyne.spruce.SpruceModClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.LevelLoadingScreen;
 import net.minecraft.client.gui.screen.Screen;
@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import java.util.Objects;
 
 @Mixin(MinecraftClient.class)
-public class ExampleClientMixin {
+public class MinecraftClientInjection {
 	@Inject(at = @At("HEAD"), method = "run")
 	private void run(CallbackInfo info) {
 		// This code is injected into the start of MinecraftClient.run()V
@@ -30,15 +30,15 @@ public class ExampleClientMixin {
 	@Inject(at = @At("TAIL"), method = "setScreen", locals = LocalCapture.CAPTURE_FAILHARD)
 	private void setScreen(@Nullable Screen screen, CallbackInfo info) {
 		if (screen instanceof TitleScreen) {
-			ExampleModClient.discord.setActivityState("On title screen");
+			SpruceModClient.discord.setActivityState("On title screen");
 		} else if (screen instanceof RealmsMainScreen) {
-			ExampleModClient.discord.setActivityState("On Realms screen");
+			SpruceModClient.discord.setActivityState("On Realms screen");
 		} else if (screen instanceof MultiplayerScreen) {
-			ExampleModClient.discord.setActivityState("On multiplayer screen");
+			SpruceModClient.discord.setActivityState("On multiplayer screen");
 		} else if (screen instanceof SelectWorldScreen) {
-			ExampleModClient.discord.setActivityState("On singleplayer screen");
+			SpruceModClient.discord.setActivityState("On singleplayer screen");
 		} else if (screen instanceof LevelLoadingScreen) {
-			ExampleModClient.discord.setActivityState("Loading into world");
+			SpruceModClient.discord.setActivityState("Loading into world");
 		}
 	}
 
@@ -62,6 +62,6 @@ public class ExampleClientMixin {
 			}
 		}
 
-		ExampleModClient.discord.setActivityState(state);
+		SpruceModClient.discord.setActivityState(state);
 	}
 }

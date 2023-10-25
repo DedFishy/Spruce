@@ -30,7 +30,7 @@ public class SprucePlayerListEntry extends PlayerListEntry {
 
     private void LoadCape(String displayName, String uuid) {
         try {
-            NativeImage image = DownloadFile("http://131.150.187.186/capes/" + displayName + ".png");
+            NativeImage image = DownloadFile("http://" + SpruceMod.address + "/capes/" + displayName + ".png");
             TextureManager textureManager = MinecraftClient.getInstance().getTextureManager();
             NativeImageBackedTexture texture = new NativeImageBackedTexture(image);
             Identifier textureId = new Identifier("spruce", "capes/" + uuid);

@@ -17,10 +17,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.boyne.spruce.ExampleMod"
+			"dev.boyne.spruce.SpruceMod"
 		],
 		"client": [
-			"dev.boyne.spruce.ExampleModClient"
+			"dev.boyne.spruce.SpruceModClient"
 		]
 	},
 	"mixins": [

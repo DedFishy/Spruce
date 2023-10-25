@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class ExampleModClient implements ClientModInitializer {
+public class SpruceModClient implements ClientModInitializer {
 	public static DiscordIntegration discord = new DiscordIntegration();
 	@Override
 	public void onInitializeClient() {
